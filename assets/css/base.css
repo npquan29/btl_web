@@ -33,6 +33,7 @@ a {
     top: 0;
     z-index: 999;
     background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
 .header__logo {

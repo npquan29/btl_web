@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>Purchase</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -12,10 +12,8 @@
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/about.css">
-
+    <link rel="stylesheet" href="assets/css/purchase.css">
 </head>
 <body>
     <!-- header -->
@@ -64,63 +62,87 @@
         </ul>
     </div>
     <!-- End header -->
-
-    <!-- banner -->
-    <div class="banner">
-        <div class="banner__main">
-            <div class="banner__title">
-                About
-            </div>
-            <ul class="banner__url">
-                <li>Home</li>
-                <li>
-                    <i class="fa-solid fa-chevron-right"></i>
-                </li>
-                <li>
-                    About
-                </li>
-            </ul>
-        </div>
-    </div>
-    <!-- End banner -->
-
-    <!-- content -->
-    <div class="content">
-        <div class="container">
-            <div class="content__box">
-                <div class="content__left">
-                    <div class="content__image">
-                        <img src="assets/image/contentimage.jfif" alt="">
-                    </div>
-                </div>
-                <div class="content__right">
-                    <div class="content__right-title">Team 10 - Web Programming</div>
-                    <ul>
-                        <li>
-                            <i class='bx bx-user-circle'></i>
-                            <span>Nguyen An Phat - B20DCPT151</span>
-                        </li>
-                        <li>
-                            <i class='bx bx-user-circle'></i>
-                            <span>Vu Xuan Manh - B20DCPT126</span>
-                        </li>
-                        <li>
-                            <i class='bx bx-user-circle'></i>
-                            <span>Nguyen Phu Quan - B20DCPT161</span>
-                        </li>
-                        <li>
-                            <i class='bx bx-user-circle'></i>
-                            <span>Le Quang Thai - B20DCPT191</span>
-                        </li>
-                    </ul>
-                    <a href="#" class="content__btn">
-                        Contact Us
-                    </a>
-                </div>
+    
+    <!-- purchase -->
+    <div class="purchase">
+        <div class="purchase__tab">
+            <div class="purchase__menu">
+                <ul>
+                    <li>
+                        <a href="profileUser.html">Profile</a>
+                    </li>
+                    <li>
+                        <a href="purchase.html">Purchase</a>
+                    </li>
+                    <li>
+                        <a href="changePass.html">Change Password</a>
+                    </li>
+                    <li>
+                        <a href="#">Log out</a>
+                    </li>
+                </ul>
             </div>
         </div>
+        <div class="purchase__right">
+            <h2>Purchase</h2>
+            <div class="purchase__table">
+                <table>
+                    <tr>
+                        <th>STT</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td class="purchase__stt">1</td>
+                        <td class="purchase__date">6 May 2023</td>
+                        <td class="purchase__money">1000$</td>
+                        <td class="purchase__status">Processing</td>
+                        <td class="purchase__view">
+                            <a href="#">
+                                View Details
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="purchase__stt">1</td>
+                        <td class="purchase__date">6 May 2023</td>
+                        <td class="purchase__money">1000$</td>
+                        <td class="purchase__status">Processing</td>
+                        <td class="purchase__view">
+                            <a href="#">
+                                View Details
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="purchase__stt">1</td>
+                        <td class="purchase__date">6 May 2023</td>
+                        <td class="purchase__money">1000$</td>
+                        <td class="purchase__status">Processing</td>
+                        <td class="purchase__view">
+                            <a href="#">
+                                View Details
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="purchase__stt">1</td>
+                        <td class="purchase__date">6 May 2023</td>
+                        <td class="purchase__money">1000$</td>
+                        <td class="purchase__status">Processing</td>
+                        <td class="purchase__view">
+                            <a href="#">
+                                View Details
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-    <!-- End content -->
+    <!-- End purchase -->
 
     <!-- footer -->
     <div class="footer">
