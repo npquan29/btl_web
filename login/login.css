@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+}
+
+.content{
+    box-shadow: 0 0 8px 0 rgba(44, 44, 44, 0.2);
+    width: 30%;
+    margin: auto;
+    padding: 50px 30px;
+    border-radius: 5px;
+}
+
+.content_header{
+    text-align: center;
+}
+
+.content_header img{
+    width: 100px;
+    margin-bottom: 10px;
+
+}
+
+.content_header h1{
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.login-container {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #B88E2F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #d4ae54;
+}
+
+.content_footer{
+    margin-top: 20px;
+}
+
+.content_footer span{
+    font-size: 14px;
+}
+
+.content_footer span a{
+    color: blue;
+    font-size: 14px;
+}
