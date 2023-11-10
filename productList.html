@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="admin.css" />
-    <link rel="stylesheet" href="productList.css" />
-    <link rel="stylesheet" href="addProduct.css" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -20,7 +18,9 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <title>Add Product</title>
+    <link rel="stylesheet" href="assets/css/productList.css" />
+    <link rel="stylesheet" href="assets/css/admin.css" />
+    <title>Document</title>
   </head>
   <body>
     <div class="container">
@@ -65,54 +65,57 @@
           </div>
         </div>
       </div>
+
       <div class="content">
         <div class="content_head">
           <h1>Product</h1>
           <div class="content_add">
-            <span>Dashboard > Product List > Product Details</span>
-            <button><a href="#">Save Product</a></button>
+            <span>Dashboard > Product List</span>
+            <button><a href="addProduct.html">Add Product</a></button>
           </div>
         </div>
-        <div class="form-container">
-          <form action="#" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-              <label for="productName">Tên Sản Phẩm:</label>
-              <input type="text" id="productName" name="productName" required />
-            </div>
-            <div class="form-group">
-              <label for="category">Category:</label>
-              <select id="category" name="category" required>
-                <option value="Electronics">Electronics</option>
-                <option value="Clothing">Clothing</option>
-                <option value="Home">Home</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="quantity">Số Lượng:</label>
-              <input type="number" id="quantity" name="quantity" required />
-            </div>
-            <div class="form-group">
-              <label for="price">Giá:</label>
-              <input type="text" id="price" name="price" required />
-            </div>
-            <div class="form-group">
-              <label for="images">Ảnh Sản Phẩm:</label>
-              <input
-                type="file"
-                id="images"
-                name="images[]"
-                accept="image/*"
-                multiple
-              />
-            </div>
-            <div class="form-group">
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th><input type="checkbox" id="selectAllCheckbox" /></th>
+                <th>Tên Sản Phẩm</th>
+                <th>Mã Sản Phẩm</th>
+                <th>Category</th>
+                <th>Số Lượng</th>
+                <th>Giá</th>
+                <th>Ngày Thêm Sản Phẩm</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Product 1</td>
+                <td>12345</td>
+                <td>Electronics</td>
+                <td>10</td>
+                <td>$100</td>
+                <td>2023-10-29</td>
+                <td><button>Edit</button> <button>Delete</button></td>
+              </tr>
+              <tr>
+                <td><input type="checkbox" /></td>
+                <td>Product 2</td>
+                <td>67890</td>
+                <td>Clothing</td>
+                <td>20</td>
+                <td>$50</td>
+                <td>2023-10-29</td>
+                <td><button>Edit</button> <button>Delete</button></td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
     </div>
   </body>
+
   <script>
     const productDropdown = document.querySelector(".productDropdown");
     const productList = document.querySelector(".productList");
@@ -120,6 +123,15 @@
     productDropdown.addEventListener("click", () => {
       console.log(1);
       productList.classList.toggle("open");
+    });
+
+    var selectAllCheckbox = document.getElementById("selectAllCheckbox");
+
+    var checkboxes = document.querySelectorAll('tbody input[type="checkbox"]');
+    selectAllCheckbox.addEventListener("change", function () {
+      checkboxes.forEach(function (checkbox) {
+        checkbox.checked = selectAllCheckbox.checked;
+      });
     });
   </script>
 </html>
