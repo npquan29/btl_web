@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Purchase</title>
+    <title>OrderDetails</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -13,9 +13,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/purchase.css">
+    <link rel="stylesheet" href="assets/css/orderDetails.css">
 </head>
 <body>
+    
     <!-- header -->
     <div class="header">
         <a href="index.html">
@@ -62,11 +63,11 @@
         </ul>
     </div>
     <!-- End header -->
-    
-    <!-- purchase -->
-    <div class="purchase">
-        <div class="purchase__tab">
-            <div class="purchase__menu">
+
+    <!-- details -->
+    <div class="details">
+        <div class="details__tab">
+            <div class="details__menu">
                 <ul>
                     <li>
                         <a href="profileUser.html">Profile</a>
@@ -83,66 +84,94 @@
                 </ul>
             </div>
         </div>
-        <div class="purchase__right">
-            <h2>Purchase</h2>
-            <div class="purchase__table">
+        <div class="details__right">
+            <h2>Order Details: #DH01981883</h2>
+            <div class="details__table">
                 <table>
                     <tr>
                         <th>STT</th>
-                        <th>Date</th>
-                        <th>Amount</th>
-                        <th>Status</th>
-                        <th></th>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
                     </tr>
                     <tr>
-                        <td class="purchase__stt">1</td>
-                        <td class="purchase__date">6 May 2023</td>
-                        <td class="purchase__money">1000$</td>
-                        <td class="purchase__status">Processing</td>
-                        <td class="purchase__view">
-                            <a href="orderDetails.html">
-                                View Details
-                            </a>
+                        <td class="details__stt">1</td>
+                        <td class="details__product">
+                            <div>
+                                <img src="assets/image/diningchair.jpg" alt="">
+                                <span>Dining Chair</span>
+                            </div>
+                        </td>
+                        <td class="details__price">
+                            1000$
+                        </td>
+                        <td class="details__quantity">
+                            2
+                        </td>
+                        <td class="details__subtotal">
+                            2000$
                         </td>
                     </tr>
                     <tr>
-                        <td class="purchase__stt">1</td>
-                        <td class="purchase__date">6 May 2023</td>
-                        <td class="purchase__money">1000$</td>
-                        <td class="purchase__status">Processing</td>
-                        <td class="purchase__view">
-                            <a href="orderDetails.html">
-                                View Details
-                            </a>
+                        <td class="details__stt">1</td>
+                        <td class="details__product">
+                            <div>
+                                <img src="assets/image/diningchair.jpg" alt="">
+                                <span>Dining Chair</span>
+                            </div>
+                        </td>
+                        <td class="details__price">
+                            1000$
+                        </td>
+                        <td class="details__quantity">
+                            2
+                        </td>
+                        <td class="details__subtotal">
+                            2000$
                         </td>
                     </tr>
                     <tr>
-                        <td class="purchase__stt">1</td>
-                        <td class="purchase__date">6 May 2023</td>
-                        <td class="purchase__money">1000$</td>
-                        <td class="purchase__status">Processing</td>
-                        <td class="purchase__view">
-                            <a href="orderDetails.html">
-                                View Details
-                            </a>
+                        <td class="details__stt">1</td>
+                        <td class="details__product">
+                            <div>
+                                <img src="assets/image/diningchair.jpg" alt="">
+                                <span>Dining Chair</span>
+                            </div>
+                        </td>
+                        <td class="details__price">
+                            1000$
+                        </td>
+                        <td class="details__quantity">
+                            2
+                        </td>
+                        <td class="details__subtotal">
+                            2000$
                         </td>
                     </tr>
                     <tr>
-                        <td class="purchase__stt">1</td>
-                        <td class="purchase__date">6 May 2023</td>
-                        <td class="purchase__money">1000$</td>
-                        <td class="purchase__status">Processing</td>
-                        <td class="purchase__view">
-                            <a href="orderDetails.html">
-                                View Details
-                            </a>
+                        <td class="details__stt">1</td>
+                        <td class="details__product">
+                            <div>
+                                <img src="assets/image/diningchair.jpg" alt="">
+                                <span>Dining Chair</span>
+                            </div>
+                        </td>
+                        <td class="details__price">
+                            1000$
+                        </td>
+                        <td class="details__quantity">
+                            2
+                        </td>
+                        <td class="details__subtotal">
+                            2000$
                         </td>
                     </tr>
                 </table>
             </div>
         </div>
     </div>
-    <!-- End purchase -->
+    <!-- End details -->
 
     <!-- footer -->
     <div class="footer">
@@ -198,5 +227,6 @@
         </div>
     </div>
     <!-- End footer -->
+
 </body>
 </html>
