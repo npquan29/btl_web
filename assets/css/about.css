@@ -130,6 +130,7 @@
     margin-top: 30px;
     border: 1px solid #fff;
     font-weight: 500;
+    transition: all .3s;
 }
 
 .content__btn:hover {
