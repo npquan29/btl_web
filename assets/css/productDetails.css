@@ -119,6 +119,7 @@
     border: 1px solid #fff;
     font-weight: 500;
     transition: all .3s;
+    cursor: pointer;
 }
 
 .product__right button:hover {
