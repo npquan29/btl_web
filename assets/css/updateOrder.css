@@ -1,11 +1,11 @@
-/* product */
-.product {
+/* detail */
+.detail {
     margin-left: 279.93px;
     padding: 30px;
     flex: 1;
 }
 
-.product h1 {
+.detail h1 {
     font-size: 28px;
     font-weight: 500;
     line-height: 32px;
@@ -15,33 +15,26 @@
     color: #B88E2F;
 }
 
-.product__form .form-group {
+.detail__form .form-group {
     margin-bottom: 20px;
 }
 
-.product__form label {
+.detail__form label {
     display: block;
     font-weight: 500;
     margin-bottom: 8px;
     font-size: 18px;
 }
 
-.product__form .form-group input,
-.product__form .form-group textarea,
-.product__form .form-group select {
+.detail__form .form-group input,
+.detail__form .form-group select {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.product__form .form-group textarea {
-    height: 100px;
-    resize: none;
-    text-wrap: wrap;
-} 
-
-.product__form .form__btn {
+.detail__form .form__btn {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -65,4 +58,4 @@
     background-color: #B88E2F;
     border: 1px solid #B88E2F;
 }
-/* End product */
+/* End detail */
