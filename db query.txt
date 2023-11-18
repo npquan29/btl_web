@@ -1,9 +1,17 @@
 1. comment
-CREATE TABLE `category` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `comment` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `productId_cmt` int DEFAULT NULL,
+  `userId_cmt` int DEFAULT NULL,
+  `createAt` date DEFAULT NULL,
+  `updateAt` date DEFAULT NULL,
+  `content` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `userId_idx` (`userId_cmt`),
+  KEY `productId_cmt_idx` (`productId_cmt`),
+  CONSTRAINT `productId_cmt` FOREIGN KEY (`productId_cmt`) REFERENCES `product` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `userId_cmt` FOREIGN KEY (`userId_cmt`) REFERENCES `user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 2. category
 CREATE TABLE `category` (
