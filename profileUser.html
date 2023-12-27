@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile User</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -13,10 +14,10 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="assets/css/base.css" />
-    <link rel="stylesheet" href="assets/css/profileUser.css">
+    <link rel="stylesheet" href="assets/css/profileUser.css" />
 </head>
+
 <body>
-    
     <!-- header -->
     <div class="header">
         <a href="index.html">
@@ -86,21 +87,33 @@
         </div>
         <div class="profile__right">
             <h2>My profile</h2>
-            <div class="profile__main">
+            <form action="#" class="profile__main" id="profileForm">
                 <h3 class="profile__title">Username</h3>
-                <div class="profile__desc">xuanmanh1703</div>
+                <div class="profile__username" disabled>xuanmanh</div>
                 <h3 class="profile__title">Full name</h3>
-                <div class="profile__desc">Vu Xuan Manh</div>
+                <input class="profile__desc" disabled name="fullname" value="Vu Xuan Manh" />
                 <h3 class="profile__title">Email</h3>
-                <div class="profile__desc">xuanmanh2002@gmail.com</div>
+                <input class="profile__desc" disabled name="email" value="xuanmanh2002@gmail.com" />
                 <h3 class="profile__title">Address</h3>
-                <div class="profile__desc">Nguyen Trai - Ha Noi</div>
+                <input class="profile__desc" disabled name="address" value="Nguyen Trai - Ha Noi" />
                 <h3 class="profile__title">Phone</h3>
-                <div class="profile__desc">098478739</div>
+                <input class="profile__desc" disabled name="phone" value="098478739" />
                 <div class="profile__btn">
-                    <a href="#">Edit</a>
+                    <button id="edit" type="button" onclick="toggleEdit()">Edit</button>
+                    <ul>
+                        <li>
+                            <button id="cancel" type="button" onclick="cancelEdit()" style="display: none">
+                                Cancel
+                            </button>
+                        </li>
+                        <li>
+                            <button id="save" type="submit" style="display: none">
+                                Save
+                            </button>
+                        </li>
+                    </ul>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
     <!-- End profile -->
@@ -110,20 +123,14 @@
         <div class="container">
             <div class="footer__main">
                 <div class="footer__contact">
-                    <div class="footer__contact-title">
-                        Furnish
-                    </div>
+                    <div class="footer__contact-title">Furnish</div>
                     <div class="footer__contact-address">
                         Km10, Nguyen Trai Street, Ha Dong District, Hanoi
                     </div>
-                    <div class="footer__contact-phone">
-                        (+84) 62003232
-                    </div>
+                    <div class="footer__contact-phone">(+84) 62003232</div>
                 </div>
                 <div class="footer__links">
-                    <div class="footer__title">
-                        Links
-                    </div>
+                    <div class="footer__title">Links</div>
                     <ul>
                         <li>Home</li>
                         <li>Shop</li>
@@ -132,9 +139,7 @@
                     </ul>
                 </div>
                 <div class="footer__help">
-                    <div class="footer__title">
-                        Help
-                    </div>
+                    <div class="footer__title">Help</div>
                     <ul>
                         <li>Payment Options</li>
                         <li>Returns</li>
@@ -142,14 +147,10 @@
                     </ul>
                 </div>
                 <div class="footer__newsletter">
-                    <div class="footer__title">
-                        Newsletter
-                    </div>
+                    <div class="footer__title">Newsletter</div>
                     <div class="footer__input">
-                        <input type="text" placeholder="Enter Your Email Address">
-                        <a href="#">
-                            Subscribe
-                        </a>
+                        <input type="text" placeholder="Enter Your Email Address" />
+                        <a href="#"> Subscribe </a>
                     </div>
                 </div>
             </div>
@@ -160,5 +161,51 @@
     </div>
     <!-- End footer -->
 
+    <script>
+        const toggleEdit = () => {
+            var form = document.getElementById("profileForm");
+            var inputs = form.querySelectorAll(".profile__desc");
+            var editButton = document.getElementById("edit");
+            var cancelButton = document.getElementById("cancel");
+            var saveButton = document.getElementById("save");
+
+            inputs.forEach((input) => {
+                input.disabled = false;
+            });
+
+            editButton.style.display = "none";
+
+            cancelButton.style.display = "inline-block";
+            saveButton.style.display = "inline-block";
+        };
+
+        const cancelEdit = () => {
+            var form = document.getElementById("profileForm");
+            var inputs = form.querySelectorAll(".profile__desc");
+            var editButton = document.getElementById("edit");
+            var cancelButton = document.getElementById("cancel");
+            var saveButton = document.getElementById("save");
+
+            inputs.forEach((input) => {
+                input.disabled = true;
+            });
+
+            editButton.style.display = "inline-block";
+
+            cancelButton.style.display = "none";
+            saveButton.style.display = "none";
+        };
+
+        document.addEventListener("DOMContentLoaded", function () {
+            // Đăng ký hàm toggleEdit và cancelEdit cho sự kiện click
+            document
+                .getElementById("edit")
+                .addEventListener("click", toggleEdit);
+            document
+                .getElementById("cancel")
+                .addEventListener("click", cancelEdit);
+        });
+    </script>
 </body>
+
 </html>

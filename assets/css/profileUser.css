@@ -53,29 +53,49 @@
     letter-spacing: 0.5px;
 }
 
-.profile__desc {
+.profile__username, .profile__desc {
     background-color: #fff;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
 }
 
+.profile__desc {
+    width: 100%;
+    display: block;
+    color: #000;
+}
+
 .profile__btn {
     margin-top: 15px;
 }
 
-.profile__btn a{
+.profile__btn button{
     display: inline-block;
     padding: 15px 30px;
     border: 1px solid #B88E2F;
+    background-color: #fff;
     color: #000;
     border-radius: 5px;
     letter-spacing: 0.5px;
     font-size: 20px;
+    cursor: pointer;
 }
 
-.profile__btn a:hover{
+.profile__btn button:hover{
     background-color: #B88E2F;
     color: #fff;
 }
+
+.profile__btn ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.profile__btn ul li {
+    margin-right: 40px;
+}
+
 /* End profile */
