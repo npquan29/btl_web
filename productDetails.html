@@ -122,7 +122,20 @@
             Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero
             with a well-balanced audio which boasts a clear midrange and extended highs for a sound.
           </div>
-          <button>Add to cart</button>
+          <form action="addCart" method="get">
+            <input type="hidden" name="id" value="IT6">
+            <div>
+              <a class="minus">
+                <i class="fa-solid fa-minus"></i>
+              </a>
+              <span class="number">1</span>
+              <input type="hidden" name="num">
+              <a class="plus" onclick="check(3, 5)">
+                <i class="fa-solid fa-plus"></i>
+              </a>
+            </div>
+            <button type="submit">Add to cart</button>
+          </form>
         </div>
       </div>
     </div>
@@ -235,6 +248,74 @@
     </div>
   </div>
   <!-- End footer -->
+
+  <!-- modal -->
+  <div class="modal" id="modal">
+    <h4 id="modalMessage"></h4>
+  </div>
+  <!-- End modal -->
+
+  <script>
+    var spanElement = document.querySelector('.number');
+    var inputElement = document.querySelector('input[name="num"]');
+    var minusButton = document.querySelector('.minus');
+    var plusButton = document.querySelector('.plus');
+
+    minusButton.addEventListener('click', function () {
+      updateValue(-1);
+    });
+
+    // plusButton.addEventListener('click', function () {
+    //   updateValue(1);
+    // });
+
+    function showModal(message) {
+      var modal = document.getElementById("modal");
+      var modalMessage = document.getElementById("modalMessage");
+
+      modalMessage.innerText = message;
+      modal.classList.add("show");
+
+      setTimeout(function () {
+        closeModal();
+      }, 1500);
+    }
+
+    function closeModal() {
+      var modal = document.getElementById("modal");
+      modal.classList.remove("show");
+    }
+
+    const updateValue = (change) => {
+      var currentValue = parseInt(spanElement.textContent);
+
+      // Cập nhật giá trị mới
+      var newValue = currentValue + change;
+
+      // Giữ giá trị không dưới 1
+      newValue = Math.max(newValue, 1);
+
+      // Cập nhật giá trị vào thẻ span và input
+      spanElement.textContent = newValue;
+      inputElement.value = newValue;
+
+    }
+
+    const check = (inCart, inStock) => {
+      var currentValue = parseInt(spanElement.textContent);
+      console.log(currentValue);
+      if (currentValue + inCart + 1 > inStock) {
+        showModal("Can't add more products!");
+      }
+      else {
+        spanElement.textContent = currentValue + 1;
+        inputElement.value = currentValue + 1;
+      }
+
+    }
+
+
+  </script>
 </body>
 
 </html>

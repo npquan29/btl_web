@@ -192,13 +192,13 @@
                                     <a href="productDetails.html">
                                         <i class="fa-regular fa-eye"></i>
                                     </a>
-                                    <a href="#">
+                                    <a id="addCart" onclick="checkQuantity(1, 'IT01')">
                                         <i class="fa-solid fa-cart-shopping"></i>
                                     </a>
                                 </div>
                             </div>
                             <div class="products__tag">
-                                New
+                                Stocking
                             </div>
                         </div>
                         <div class="products__item">
@@ -520,6 +520,41 @@
         </div>
     </div>
     <!-- End footer -->
+
+    <!-- modal -->
+    <div class="modal" id="modal">
+        <h4 id="modalMessage"></h4>
+    </div>
+    <!-- End modal -->
+
+    <script>
+
+        function showModal(message) {
+            var modal = document.getElementById("modal");
+            var modalMessage = document.getElementById("modalMessage");
+
+            modalMessage.innerText = message;
+            modal.classList.add("show");
+
+            setTimeout(function () {
+                closeModal();
+            }, 1500);
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.classList.remove("show");
+        }
+
+        const checkQuantity = (num, id) => {
+            if (num >= 1) {
+                window.location.href = 'addCart?action=add&id=' + id + '&num=1';
+            }
+            else {
+                showModal("The product is out of stock !");
+            }
+        }
+    </script>
 </body>
 
 </html>
